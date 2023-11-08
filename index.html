@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Giới thiệu javascript</h1>
+    <!-- <script src="./main.js"></script> -->
+    <!-- <button id="demo" onclick="windowalert(' Đã Click vào tôi ')">Click</button> -->
+    <div id="demo"></div>
+
+    <div>
+      <h2 id="name"></h2>
+      <h2 id="diem"></h2>
+      <h2 id="xep_hang"></h2>
+      <h2 id="sothich"></h2>
+    </div>
+
+    <!-- 
+        tinh tổng
+     -->
+    <h2>Chương trình tính tổng</h2>
+    <p>Số thứ 1</p>
+    <input type="text" placeholder=" Nhập vào số tiền số thứ 1" id="sothu1" />
+    <p>Số thứ 2</p>
+    <input type="text" placeholder=" Nhập vào số tiền số thứ 2 " id="sothu2" />
+    <button onclick="tinhTong()">Tính tổng</button>
+
+    Kết quả :
+    <h1 id="ketqua"></h1>
+
+    <script src="tinhtong.js"></script>
+
+    <script>
+      document.getElementById("demo").innerText =
+        "<h2>My First JavaScript</h2>";
+
+      //   document.write("<h1> THẻ h1 </h1>");
+
+      // dữ liệu
+      // biến sẽ mang tác dụng lưu trữ những giá trị liên quan trong ứng dụng của mình
+      //   var a, b, c;
+
+      //   a = 5;
+      //   b = 6;
+      //   c = a + b;
+      //   let c = 1;
+      //   let b = 1;
+      //   console.log("giá trị của c là ", c);
+
+      //let a = 1;
+      //    blocks code
+      //   function tinhDiem() {
+      //     let a = 56;
+      //     console.log("a là ", a);
+      //   }
+      //   function tinhLuong() {
+      //     let a = 2;
+      //     console.log("a là ", a);
+      //   }
+      //   var x;
+      //   x = 5;
+      //   y = 6;
+
+      //   let ten = "Nguyen Van A";
+      //   let so = -1232.1;
+
+      //   let soNguyen = 123;
+      //   var cha = 100000;
+
+      //   {
+      //     let  con = 123;
+      //     console.log("gia tri cha ", cha);
+      //   }
+
+      //   console.log(" gia tri con ", con);
+
+      //   camelCase , snake_case
+      //   let tenNhanvien = 'nguyen van a'
+      //   let tenNhanVien = 'nguyen van a'
+
+      //   let  tongDiemTrungBinhThang  =
+      // function getDiemTrungBinhThang() {
+      // }
+
+      //let a = "Ngueyn Văn A";
+      // let diem = 10;
+      //let xep_hang = "GIOI";
+
+      //   let so = -10;
+      //   let dung = true;
+      //   let sai = false;
+
+      //   let user2 = null;
+      //   console.log("user2 ", user2);
+      // 1 object sẽ là 1 tập hợp của các cặp key và value (function , array) và mỗi cặp cách nhau bằng dấu phải
+      //   let obj = {
+      //     name: "Ngueyn Văn A",
+      //     diem: 10,
+      //     xep_hang: "GIOI",
+      //     sothich: ["di ăn ", "di ngũ "],
+      //   };
+      //   document.getElementById("name").innerText = "Tên " + obj.name;
+      //   document.getElementById("diem").innerText = obj.diem;
+      //   document.getElementById("xep_hang").innerText = obj.xep_hang;
+      //   document.getElementById("sothich").innerHTML = obj.sothich;
+      //console.log("obj cua toi ", obj);
+      //   let doituong = [1, "a", true, false, { name: "Nguyen Van A" }];
+      //   console.log(typeof doituong);
+
+      //   let dt2 = { age: 18 };
+      //   dt2.name = "nguyen van a ";
+      //   console.log(dt2);
+      //   dt2.age = 21;
+      //   console.log("lần 2 ", dt2);
+      /*
+        Đối tượng trong javascript nó bao gồm : oject , array
+      */
+
+      //   let mangSo = [1, 2, 35, 6, 3, 9];
+      //   console.log(mangSo);
+
+      //   mangSo[6] = 10;
+      //   console.log(mangSo);
+
+      // kiểu ngày
+      //   const today = new Date();
+      //   console.log(" ngay ", today.getFullYear());
+
+      // kieu tham chiếu và tham trị
+      // tham trị nó chỉ hiệu nghiem với các kiểu dữ liệu nguyên thủy
+      //   let a = 1;
+      //   let b;
+      //   b = a;
+      //   a = a + 1;
+      //   console.log("a ", a);
+      //   console.log("b ", b);
+      // còn đối với cái kiểu dữ liệu do người dùng tạo ra tùy hứng (object ,array ) . thì sẽ  là tham chiếu
+
+      //  Object
+      //   let usernameA = { name: "Ngueyn Van A" };
+      //   let usernameB;
+      //   usernameB = usernameA;
+
+      //   console.log("usernameA ", usernameA);
+      //   console.log("usernameB ", usernameB);
+
+      //   usernameA.name = "Ngiuyen Van C";
+      //   console.log("usernameA thay doi thì usernameB ", usernameB);
+      // Address : XXX_111_ : tham chiếu
+
+      // mảng
+      //   let mangSo = [1, 2, 3, 4, 5];
+      //   let mangKhac = mangSo;
+      //   console.log("mangSO", mangSo);
+      //   console.log("mangKhac", mangKhac);
+
+      //   mangSo.push(12);
+
+      //   console.log("mangSO", mangSo);
+      //   console.log("mangKhac", mangKhac);
+      //   let a = 1 - 1;
+      //   console.log(a);
+      //   let x = 1;
+      //   let y = 2;
+      //   x = x + y;
+      //   console.log(x);
+      //   let condition = false;
+      //   let diem = 6;
+      //   if (diem >= 5) {
+      //     console.log("trung binh ");
+      //   }
+      //   if (diem >= 5 && diem < 8) {
+      //     console.log("khá  ");
+      //   } else {
+      //     alert(" get out  ");
+      //   }
+      //   let x = 1;
+      //   let y = 2;
+      //   if (true && true && true) {
+      //     console.log("Vào đây thực thi");
+      //     // function
+      //     // array
+      //   } else {
+      //     console.log("không thực thi");
+      //   }
+      //   const isValid = true;
+      //   if (false) {
+      //     ///
+      //     console.log(" vao đây");
+      //   } else {
+      //     console.log(" vao trong đây");
+      //   }
+      //   let age = 10;
+      //   let check = age < 18 ? "Too young" : "Old enough";
+      //   console.log(check);
+      //hàm có thể trả về số , trả về chuỗi , trả đúng.sai
+      //   function tingTong() {
+      //     //
+      //     let a = 10_000_000;
+      //     return null;
+      //     //
+      //   }
+      //   function checkHopLe(sothunhat, sothuhai) {
+      //     let check = true; // đầu  tiên  là dúng
+      //     // ki thuat đặt cờ
+      //     if (typeof sothunhat !== "number") {
+      //       check = false;
+      //     }
+
+      //     if (typeof sothuhai !== "number") {
+      //       check = false;
+      //     }
+
+      //     return check;
+      //   }
+      //   const isValid = checkHopLe("aa", "aaa123213");
+      //   let message = isValid ? "Hợp lệ " : "Không hợp lệ";
+      //   console.log(" hop le khong >>> ", message);
+
+      // void hàm thuc thi chứ ko trả về
+      function myFunction() {
+        let a = 1;
+        //
+        //
+        a = 16;
+        return a;
+      }
+      console.log(myFunction());
+    </script>
+  </body>
+</html>
